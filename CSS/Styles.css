@@ -1,0 +1,364 @@
+/* ===========================================================
+   Patinhas Amigas — style.css
+   Tema: fofinho | Fundo branco + detalhes rosa
+   Suporta as páginas existentes (sobre, projetos, voluntariado,
+   doações, transparência, blog, contato, galeria).
+   =========================================================== */
+
+/* ---------- Reset básico e acessibilidade ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body, h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul { padding-left: 1.25rem; }
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+/* ---------- Design System (cores, tipografia, espaçamentos) ---------- */
+:root{
+  /* 🎨 Paleta rosa (8+ cores) */
+  --rose-50: #fdf5f7;
+  --rose-100:#f8e9ee;
+  --rose-200:#f3dbe3;
+  --rose-300:#efccd7;
+  --rose-400:#ebbcc9;
+  --rose-500:#e7adbc; /* primária suave */
+  --rose-600:#e195ab; /* hover */
+  --rose-700:#d27390; /* ênfase */
+  --rose-900:#7c3a4f; /* texto de destaque escuro */
+
+  /* Neutros */
+  --white:#ffffff;
+  --neutral-50:#fafafa;
+  --neutral-100:#f4f4f5;
+  --neutral-200:#e9eaec;
+  --neutral-300:#dfe1e6;
+  --neutral-700:#3a3a3c;
+  --neutral-900:#1f2328;
+
+  /* Estado */
+  --success:#35a675;
+  --warning:#e9a23b;
+  --error:#d44b5c;
+
+  /* Tipografia */
+  --font-display: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Hierarquia (5 tamanhos+) */
+  --fs-xxl: clamp(2rem, 3vw + 1rem, 3rem);
+  --fs-xl:  clamp(1.5rem, 2vw + .5rem, 2.25rem);
+  --fs-lg:  1.375rem;
+  --fs-md:  1.125rem;
+  --fs-sm:  .985rem;
+  --fs-xs:  .875rem;
+
+  /* Espaçamento modular (8,16,24,32,48,64) */
+  --sp-1: .5rem;   /* 8px  */
+  --sp-2: 1rem;    /* 16px */
+  --sp-3: 1.5rem;  /* 24px */
+  --sp-4: 2rem;    /* 32px */
+  --sp-5: 3rem;    /* 48px */
+  --sp-6: 4rem;    /* 64px */
+
+  /* Layout */
+  --container: 1120px;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(214, 140, 160, .18);
+  --border: 1px solid var(--neutral-200);
+}
+
+/* ---------- Base ---------- */
+body{
+  background: var(--white);                 /* fundo branco como você pediu */
+  color: var(--neutral-900);
+  font: 400 var(--fs-sm)/1.6 var(--font-body);
+}
+
+.container{
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: 0 var(--sp-2);
+}
+
+h1,h2,h3{ font-family: var(--font-display); color: var(--neutral-900); }
+h1{ font-size: var(--fs-xxl); letter-spacing: .2px; }
+h2{ font-size: var(--fs-xl);  margin-bottom: .35em; }
+h3{ font-size: var(--fs-lg);  margin-bottom: .35em; }
+
+/* links com estilo fofinho */
+a{
+  color: var(--rose-700);
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+a:hover{ color: var(--rose-600); }
+
+/* ---------- Cabeçalho e Navegação (funciona com seu HTML atual) ---------- */
+header{
+  position: sticky; top: 0; z-index: 20;
+  background: var(--white);
+  border-bottom: var(--border);
+  box-shadow: 0 2px 0 rgba(231,173,188,.08);
+  margin-bottom: var(--sp-3);
+}
+header > h1{
+  padding: var(--sp-2) var(--sp-2) 0;
+}
+header nav{
+  background: linear-gradient(0deg, var(--rose-50), var(--white));
+  border-top: var(--border);
+}
+header nav ul{
+  list-style: none;
+  margin: 0;
+  padding: var(--sp-1) var(--sp-2);
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav a{
+  display: inline-block;
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--rose-700);
+  background: var(--rose-100);
+}
+header nav a:hover{
+  background: var(--rose-500);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Seções, artigos e áreas visuais ---------- */
+main section{
+  padding: var(--sp-3) var(--sp-2);
+}
+main section:nth-child(odd){
+  background: var(--neutral-50);
+}
+article{
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-2);
+  box-shadow: var(--shadow);
+}
+
+/* cards (projetos, blog) */
+.cards, .projetos, .galeria-grid{
+  display: grid;
+  gap: var(--sp-2);
+}
+@media (min-width: 576px){ .cards, .projetos, .galeria-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px){ .cards, .projetos, .galeria-grid{ grid-template-columns: repeat(3, 1fr); } }
+
+article img{ border-radius: 12px; }
+
+/* badges fofinhas (categorias/tags) */
+.tag{
+  display: inline-block;
+  padding: .25rem .6rem;
+  font-size: var(--fs-xs);
+  border-radius: 999px;
+  background: var(--rose-200);
+  color: var(--rose-900);
+}
+
+/* ---------- Botões ---------- */
+.btn,
+input[type="submit"],
+input[type="reset"],
+button{
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--rose-500);
+  color: var(--white);
+  font: 600 var(--fs-sm)/1 var(--font-body);
+  padding: .8rem 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, background .2s ease, box-shadow .2s ease;
+}
+.btn.outline{
+  background: var(--white);
+  color: var(--rose-700);
+  border: 2px solid var(--rose-400);
+  box-shadow: none;
+}
+.btn:hover,
+input[type="submit"]:hover,
+button:hover{ background: var(--rose-600); }
+.btn:active,
+input[type="submit"]:active,
+button:active{ transform: translateY(1px); }
+.btn:disabled{ background: var(--neutral-300); cursor: not-allowed; }
+
+/* ---------- Formulários (voluntariado, doações, contato) ---------- */
+form{
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  box-shadow: var(--shadow);
+}
+fieldset{
+  border: 2px dashed var(--rose-200);
+  border-radius: 12px;
+  padding: var(--sp-2);
+  margin-bottom: var(--sp-2);
+  background: var(--rose-50);
+}
+legend{
+  padding: 0 .5rem;
+  font-weight: 700;
+  color: var(--rose-700);
+}
+
+label{ display:block; font-weight:600; margin:.5rem 0 .35rem; }
+input, select, textarea{
+  width: 100%;
+  padding: .75rem .9rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: 12px;
+  font: 500 var(--fs-sm)/1.4 var(--font-body);
+  background: var(--white);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: var(--rose-500);
+  box-shadow: 0 0 0 4px rgba(231,173,188,.25);
+}
+
+/* feedback nativo + cores fofas */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid{ border-color: var(--error); }
+input:valid, select:valid, textarea:valid{ border-color: var(--success); }
+
+/* Radios/checkbox em linha bonitinhos */
+input[type="radio"], input[type="checkbox"]{
+  width: auto; display: inline-block; margin-right: .4rem;
+}
+
+/* ---------- Tabelas e gráficos como imagens ---------- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: var(--sp-2) 0;
+}
+th, td{
+  text-align: left;
+  padding: .85rem 1rem;
+  border-bottom: 1px solid var(--neutral-200);
+  font-size: var(--fs-sm);
+}
+thead th{
+  background: var(--rose-100);
+  color: var(--rose-900);
+  font-weight: 700;
+}
+
+/* ---------- Galeria ---------- */
+figure{ margin: 0; }
+figure + figure{ margin-top: var(--sp-2); }
+figcaption{
+  margin-top: .5rem;
+  font-size: var(--fs-xs);
+  color: var(--neutral-700);
+  text-align: center;
+}
+
+/* ---------- Alertas/Toasts (se usar) ---------- */
+.alert{
+  border-radius: 12px;
+  padding: .9rem 1rem;
+  margin: var(--sp-2) 0;
+  border: 2px solid transparent;
+}
+.alert.success{ background:#eaf7f2; border-color:#cceede; color:#1b7a57; }
+.alert.warning{ background:#fff6e7; border-color:#ffe1b3; color:#7a5209; }
+.alert.error{   background:#fff0f3; border-color:#f7c8d0; color:#7a1f2b; }
+
+/* ---------- Rodapé ---------- */
+footer{
+  margin-top: var(--sp-4);
+  border-top: var(--border);
+  background: linear-gradient(0deg, var(--rose-50), var(--white));
+}
+footer p{
+  text-align: center;
+  padding: var(--sp-2);
+  color: var(--neutral-700);
+}
+
+/* ---------- Grid 12 colunas utilitário (para futuras seções) ---------- */
+.grid-12{
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(12, 1fr);
+}
+.span-12{ grid-column: span 12; }
+.span-6 { grid-column: span 12; }
+.span-4 { grid-column: span 12; }
+@media (min-width: 768px){
+  .span-6 { grid-column: span 6; }
+  .span-4 { grid-column: span 4; }
+}
+
+/* ---------- Responsividade (5 breakpoints) ---------- */
+/* ≥1400px (opcional para telas muito grandes) */
+@media (min-width: 1400px){
+  :root{ --container: 1240px; }
+}
+/* ≤1200px */
+@media (max-width: 1200px){
+  :root{ --fs-xxl: 2.4rem; }
+}
+/* ≤992px */
+@media (max-width: 992px){
+  header nav ul{ gap: .6rem; }
+  main section{ padding: var(--sp-2) var(--sp-2); }
+}
+/* ≤768px */
+@media (max-width: 768px){
+  h1{ font-size: clamp(1.6rem, 3.5vw + .6rem, 2.1rem); }
+  header > h1{ text-align:center; padding-bottom: var(--sp-1); }
+  /* menu vira “rolável” no mobile sem alterar seu HTML */
+  header nav ul{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: .6rem;
+  }
+}
+/* ≤576px */
+@media (max-width: 576px){
+  :root{ --fs-md: 1.05rem; --fs-sm: .95rem; }
+  form{ padding: var(--sp-2); }
+  .btn{ width: 100%; text-align: center; }
+}
+
+/* ---------- Toques fofos extras ---------- */
+/* bordas levemente rosadas nas imagens principais */
+img[alt*="Patinhas Amigas"],
+img[alt*="Gato"],
+img[alt*="gato"],
+img[alt*="gatin"]{
+  border-radius: 14px;
+  outline: 3px solid rgba(231,173,188,.25);
+}
+
+/* separador suave para sessões ímpares */
+main section:nth-child(odd) {
+  background:
+    radial-gradient(1200px 180px at 50% 0, rgba(231,173,188,.09), transparent 60%) ,
+    var(--neutral-50);
+}
