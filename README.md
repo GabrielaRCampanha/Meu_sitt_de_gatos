@@ -72,20 +72,5 @@ Estilo geral: tema “fofinho”, acolhedor e amigável
 
 ✅ Manipulação de classes e elementos DOM
 
-## 📸 Prévia do Projeto
-
-### 🏠 Parte do JS
-![Introdução do JS](imagens/Captura%20de%20Tela%20%201.png)
-
-### 🐶 Link do JS
-![Inagen di index com o link do JS](imagens/Captura%20de%20Tela%202025-10-27%20às%2012.33.50.png)
-
-### 🐶 Um exemplo do codigo do projeto 
-![Exemplo do codigo do projeto](imagens/Captura%20de%20Tela%203.png)
-
-### 🌸 Páginas do Site
-<img src="imagens/print_JS.png" width="500" alt="Página inicial do site">
-<img src="imagens/print_Links.png" width="500" alt="Página de voluntariado com formulário">
-<img src="imagens/print_codigo.png" width="500" alt="Página de blog com postagens">
 
 
