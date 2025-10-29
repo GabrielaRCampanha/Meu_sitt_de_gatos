@@ -1,76 +1,192 @@
-🐾 ONG Patinhas Amigas
+🐾 Patinhas Amigas — Plataforma Web da ONG
 
-💖 Sobre o Projeto
+Projeto desenvolvido para a disciplina Algoritmo e Pensamento Computacional
+Curso: Análise e Desenvolvimento de Sistemas
 
-O projeto Patinhas Amigas foi desenvolvido como parte da disciplina de Desenvolvimento Front-End, com o objetivo de criar uma plataforma web completa para uma ONG fictícia dedicada ao resgate e cuidado de animais.
-O site permite que visitantes conheçam os projetos, façam doações, se candidatem ao voluntariado e acompanhem a transparência das ações da ONG.
 
-🎯 Objetivo Geral
+📌 📖 Sobre o Projeto
 
-O objetivo geral deste projeto é desenvolver uma plataforma web completa e funcional para uma ONG fictícia, chamada Patinhas Amigas, utilizando os fundamentos de HTML5, CSS3 e JavaScript.
-A proposta visa aplicar, de forma integrada, os conhecimentos adquiridos ao longo das disciplinas de desenvolvimento front-end, criando um site responsivo, acessível e interativo, que simula o ambiente digital de uma organização real.
+O Patinhas Amigas é um site desenvolvido para apoiar uma ONG fictícia de resgate e cuidado de gatos.
+O projeto foi criado como parte das Experiências Práticas da disciplina, integrando:
 
-O projeto busca:
+HTML5
 
-Promover a divulgação de projetos sociais e ações da ONG;
+CSS3
 
-Facilitar o cadastro de voluntários e doadores;
+JavaScript
 
-Ampliar a transparência e engajamento com o público;
+Acessibilidade (WCAG 2.1 AA)
 
-E demonstrar o domínio técnico na criação de interfaces modernas e bem estruturadas, com design acolhedor e intuitivo.
+Versionamento com GitHub
 
-🖥️ Tecnologias Utilizadas
+Deploy para ambiente de produção
 
-HTML5 → Estrutura semântica das páginas
+O objetivo é fornecer uma interface intuitiva, acessível e amigável para que visitantes conheçam a ONG, acompanhem suas ações, façam doações e entrem em contato.
 
-CSS3 → Estilização e leiaute responsivo (Flexbox e Grid)
 
-JavaScript (ES6+) → Interatividade e manipulação do DOM
+🌐 Estrutura das Páginas
 
-GitHub → Versionamento e hospedagem do código
+O site completo contém:
 
-🌸 Estrutura do Projeto
+✅ Página inicial
 
-PatinhasAmigas/
-├── index.html
-├── 2home.html
-├── 3projeto.html
-├── 4voluntariado.html
-├── 5doacoes.html
-├── 6transparencia.html
-├── 7blog.html
-├── 8contato.html
-├── 9galeria.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-└── imagens/
-    └── (fotos, ícones e logotipo)
+✅ Sobre a ONG
 
-🎨 Design System
+✅ Projetos
 
-Paleta de Cores: tons de rosa pastel, branco e cinza claro
+✅ Voluntariado
 
-Tipografia: Poppins e Inter
+✅ Doações
 
-Espaçamento Modular: 8px, 16px, 24px, 32px, 48px, 64px
+✅ Transparência
 
-Estilo geral: tema “fofinho”, acolhedor e amigável
+✅ Blog
 
-⚙️ Funcionalidades JavaScript
+✅ Contato
 
-✅ Menu hambúrguer interativo
+✅ Galeria de fotos e vídeos
 
-✅ Validação visual de formulários
+Cada página foi construída com foco em clareza, semântica e navegação simples.
 
-✅ Alertas de feedback (toasts)
 
-✅ Manipulação de classes e elementos DOM
+🎨 Design e Identidade Visual
+
+O visual segue um tema fofo e acolhedor, com:
+
+paleta em tons de rosa
+
+botões arredondados
+
+sombras suaves
+
+elementos visuais inspirados no universo pet
+
+Além disso, o projeto inclui:
+
+✅ Layout responsivo
+
+✅ Grid flexível (CSS Grid + Flexbox)
+
+✅ Botões acessíveis
+
+✅ Elementos de destaque com bordas e cartões
+
+
+⚙️ Funcionalidades Implementadas
+
+✅ Menu Responsivo (Hambúrguer)
+
+Abre e fecha no mobile utilizando JavaScript.
+
+✅ Formulário com Validação
+
+Verifica:
+
+campos obrigatórios
+
+formato de e-mail
+
+telefone preenchido
+
+Com feedback para o usuário.
+
+✅ Mensagem Automática de Boas-vindas
+
+Um toast aparece na tela ao carregar o site.
+
+✅ Modo Escuro Acessível (Dark Mode)
+
+Com alternância por botão:
+
+🌙 → modo escuro
+
+☀️ → modo claro
+
+A paleta é ajustada dinamicamente usando CSS Custom Properties.
+
+✅ Acessibilidade WCAG 2.1 AA
+
+Inclui:
+
+contraste adequado
+
+navegação por teclado
+
+foco visível
+
+textos alternativos
+
+semântica ideal (header, nav, main, section, article, footer)
+
+
+🔐 Versionamento — GitFlow
+
+O projeto segue uma estrutura profissional:
+
+🌱 Branches Utilizadas
+
+main → produção
+
+develop → desenvolvimento
+
+feature/* → funcionalidades
+
+hotfix/* → correções rápidas
+
+
+🚀 Releases com Versionamento Semântico
+
+Exemplo:
+
+v1.0.0 — Estrutura inicial
+
+v2.0.0 — Interatividade com JavaScript
+
+v3.0.0 — Versão final com acessibilidade + deploy
+
+
+🚀 Deploy em Produção
+
+O site foi publicado e está disponível em:
+
+📌 https://gabrielarcampanha.github.io/Meu_sitt_de_gatos/
+
+(substitua pelo link correto do GitHub Pages quando publicar!)
+
+📂 Como Rodar Localmente
+
+ Clonar o repositório
+
+git clone https://gabrielarcampanha.github.io/Meu_sitt_de_gatos/
+
+Acessar a pasta
+cd Patinhas-Amigas
+
+ Abrir no navegador
+start index.html   # Windows
+open index.html    # Mac
+
+📘 Tecnologias Utilizadas
+
+HTML5
+
+CSS3
+
+JavaScript
+
+GitHub
+
+GitHub Pages (deploy)
+
+📄 Autora
+
+Gabriela Rodrigues Campanha
+Acadêmica de Análise e Desenvolvimento de Sistemas
+
+❤️ Agradecimentos
+
+Este projeto tem como objetivo não só demonstrar competências técnicas, mas também incentivar a conscientização sobre o impacto social da tecnologia e a responsabilidade com acessibilidade digital.
+
 
 
 
