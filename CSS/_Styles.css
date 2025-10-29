@@ -15,6 +15,10 @@ a { color: inherit; }
 
 /* ---------- Design System (cores, tipografia, espaçamentos) ---------- */
 :root{
+  /* Cores de Fundo e Texto */
+  --cor-fundo-principal: #ffffff; /* Era --white */
+  --cor-texto-principal: #121212; /* Era --neutral-900 do dark mode */
+
   /* 🎨 Paleta rosa (8+ cores) */
   --rose-50: #fdf5f7;
   --rose-100:#f8e9ee;
@@ -67,11 +71,10 @@ a { color: inherit; }
   --border: 1px solid var(--neutral-200);
 }
 
-
 /* ---------- Base ---------- */
 body{
-  background: var(--white);                 /* fundo branco como você pediu */
-  color: var(--neutral-900);
+  background: var(--cor-fundo-principal);                 /* fundo branco como você pediu */
+  color: var(--cor-texto-principal);
   font: 400 var(--fs-sm)/1.6 var(--font-body);
 }
 
@@ -81,7 +84,7 @@ body{
   padding: 0 var(--sp-2);
 }
 
-h1,h2,h3{ font-family: var(--font-display); color: var(--neutral-900); }
+h1,h2,h3{ font-family: var(--font-display); background: var(--cor-texto-principal); }
 h1{ font-size: var(--fs-xxl); letter-spacing: .2px; }
 h2{ font-size: var(--fs-xl);  margin-bottom: .35em; }
 h3{ font-size: var(--fs-lg);  margin-bottom: .35em; }
@@ -97,7 +100,7 @@ a:hover{ color: var(--rose-600); }
 /* ---------- Cabeçalho e Navegação (funciona com seu HTML atual) ---------- */
 header{
   position: sticky; top: 0; z-index: 20;
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   border-bottom: var(--border);
   box-shadow: 0 2px 0 rgba(231,173,188,.08);
   margin-bottom: var(--sp-3);
@@ -140,7 +143,7 @@ main section:nth-child(odd){
   background: var(--neutral-50);
 }
 article{
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   border: var(--border);
   border-radius: var(--radius);
   padding: var(--sp-2);
@@ -184,7 +187,7 @@ button{
   transition: transform .08s ease, background .2s ease, box-shadow .2s ease;
 }
 .btn.outline{
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   color: var(--rose-700);
   border: 2px solid var(--rose-400);
   box-shadow: none;
@@ -199,7 +202,7 @@ button:active{ transform: translateY(1px); }
 
 /* ---------- Formulários (voluntariado, doações, contato) ---------- */
 form{
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   border: var(--border);
   border-radius: var(--radius);
   padding: var(--sp-3);
@@ -225,7 +228,7 @@ input, select, textarea{
   border: 2px solid var(--neutral-200);
   border-radius: 12px;
   font: 500 var(--fs-sm)/1.4 var(--font-body);
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   transition: border-color .2s ease, box-shadow .2s ease;
 }
 input:focus, select:focus, textarea:focus{
@@ -249,7 +252,7 @@ input[type="radio"], input[type="checkbox"]{
 table{
   width: 100%;
   border-collapse: collapse;
-  background: var(--white);
+  background: var(--cor-fundo-principal);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -357,11 +360,53 @@ img[alt*="gatin"]{
   outline: 3px solid rgba(231,173,188,.25);
 }
 
+/* Estilo normal (claro) */
+body {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
 /* separador suave para sessões ímpares */
 main section:nth-child(odd) {
   background:
     radial-gradient(1200px 180px at 50% 0, rgba(231,173,188,.09), transparent 60%) ,
     var(--neutral-50);
+}
+
+/* Estilo normal (claro) */
+body {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* ============================
+   🌙 MODO ESCURO CORRIGIDO
+   ============================ */
+/* 🌙 Modo Escuro Completo */
+
+body.modo-escuro {
+  /* Cores de Fundo e Texto (Dark) */
+  --cor-fundo-principal: #121212; /* Fundo escuro */
+  --cor-texto-principal: #ffffff; /* Texto claro */
+
+  --white: #121212;
+  --neutral-50: #1e1e1e;
+  --neutral-100: #2a2a2a;
+  --neutral-200: #333333;
+  --neutral-300: #444444;
+  --neutral-700: #d4d4d4;
+  --neutral-900: #ffffff;
+  --rose-50: #2b1a22;
+  --rose-100: #3b2530;
+  --rose-500: #ff80ab;
+  --rose-700: #ffb6c1;
+/*
+  background-color: var(--cor-fundo-principal);
+  background: var(--cor-texto-principal);
+  transition: background 0.3s ease, color 0.3s ease;
+  */
 }
 
 

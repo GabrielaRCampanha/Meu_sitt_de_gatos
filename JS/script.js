@@ -45,6 +45,7 @@ window.addEventListener('load', () => {
   setTimeout(() => bemVindo.remove(), 4000);
 });
 
+
 // ====== CSS SUGERIDO ======
 // Adicione no seu style.css:
  /*
